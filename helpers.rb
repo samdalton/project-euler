@@ -19,4 +19,11 @@ class Integer
     def is_palindrome?
         self.to_s == self.to_s.reverse
     end
+    
+    def sieve(p = 2, list = nil)
+        list ||= (p..self).to_a
+        list = list.select { |i| (i % p != 0) or (i == p) }
+        p = list.find { |i| i > p }
+        return (p**2 > self) ? list : sieve(p, list) 
+    end
 end
