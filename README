@@ -1,0 +1,4 @@
+A collection of solutions to problems on Project Euler. 
+Most are in Ruby, and some handy methods are in helpers.rb
+
+Solutions may not be optimal, but they seem to work :)
