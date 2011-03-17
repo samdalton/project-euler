@@ -18,8 +18,7 @@ end
 limit = 1000
 (1..limit).each do |i|
     (i+1..limit).each do |j|
-        (j+1..limit).each do |k|
-            puts i*j*k  if pythagorean_triplet?(i, j, k) && sum(i, j, k) == 1000
-        end
+        b = limit - i - j
+        puts i*j*b  if pythagorean_triplet?(i, j, b) && sum(i, j, b) == limit
     end
 end
